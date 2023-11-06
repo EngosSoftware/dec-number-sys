@@ -12,7 +12,7 @@ extern "C" {
   /// Unsafe binding to *decDoubleToString* function.
   pub fn decDoubleToString(dd1: *const DecDouble, s: *mut c_char) -> *mut c_char;
   /// Unsafe binding to *decDoubleZero* function.
-  pub fn decDoubleZero(dd: *mut DecDouble);
+  pub fn decDoubleZero(dd: *mut DecDouble) -> *mut DecDouble;
 }
 
 /*
