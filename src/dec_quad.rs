@@ -328,8 +328,8 @@ pub fn dec_quad_from_wider(dq1: &DecQuad, dc: &mut DecContext) -> DecQuad {
 }
 
 /// Safe binding to *decQuadGetCoefficient* function.
-pub fn dec_quad_get_coefficient(x: &DecQuad, bcd: &[u8; DEC_QUAD_PMAX]) -> c_int {
-  unsafe { decQuadGetCoefficient(x, bcd.as_ptr()) }
+pub fn dec_quad_get_coefficient(x: &DecQuad, bcd: &mut [u8; DEC_QUAD_PMAX]) -> c_int {
+  unsafe { decQuadGetCoefficient(x, bcd.as_mut_ptr()) }
 }
 
 /// Safe binding to *decQuadGetExponent* function.

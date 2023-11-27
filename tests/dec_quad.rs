@@ -223,8 +223,8 @@ fn test_dec_quad_from_u32() {
 
 #[test]
 fn test_dec_quad_get_coefficient() {
-  assert_eq!(0, dec_quad_get_coefficient(&n!(1), &bcd_quad(u128::MAX)));
-  assert_eq!(-2147483648, dec_quad_get_coefficient(&n!(-1), &bcd_quad(u128::MAX)));
+  assert_eq!(0, dec_quad_get_coefficient(&mut n!(1), &mut bcd_quad(u128::MAX)));
+  assert_eq!(-2147483648, dec_quad_get_coefficient(&mut n!(-1), &mut bcd_quad(u128::MAX)));
 }
 
 #[test]
