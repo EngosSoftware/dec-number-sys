@@ -1,6 +1,6 @@
 [package]
 name = "dec-number-sys"
-version = "0.0.27"
+version = "0.0.28"
 authors = ["Dariusz Depta <wisbery@users.noreply.github.com>"]
 description = "Rust bindings for The decNumber C library by IBM Fellow Mike Cowlishaw"
 documentation = "https://docs.rs/dec-number-sys"
