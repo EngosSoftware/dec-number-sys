@@ -40,7 +40,7 @@ fn test_dec_double_compare() {
 }
 
 #[test]
-#[rustfmt::skip]
+
 fn test_dec_double_constants() {
   // zero
   assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00]", format!("{:?}", n!(0)));
@@ -84,7 +84,7 @@ fn test_dec_double_divide() {
 }
 
 #[test]
-#[rustfmt::skip]
+
 fn test_dec_double_from_bcd() {
   assert_eq!("2366920938463463374607431768211455", s!(dec_double_from_bcd(&bcd_quad(u128::MAX), 0, false)));
   assert_eq!("18446744073709551615", s!(dec_double_from_bcd(&bcd_quad(u64::MAX.into()), 0, false)));
@@ -199,7 +199,6 @@ fn test_dec_double_add() {
 }
 
 #[test]
-#[rustfmt::skip]
 fn test_dec_double_constants() {
   // zero
   assert_eq!("[22 38 00 00 00 00 00 00]", format!("{:?}", n!(0)));

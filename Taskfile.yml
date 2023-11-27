@@ -7,12 +7,12 @@ tasks:
   all:
     desc: Runs all building steps
     cmds:
-      - cmd: cargo fmt && cargo clean && cargo build && cargo clippy -- -D warnings && cargo test && echo "SUCCESS"
+      - cmd: cargo +nightly fmt && cargo clean && cargo build && cargo clippy -- -D warnings && cargo test && echo "SUCCESS"
 
   build:
     desc: Builds the library in debug mode
     cmds:
-      - cmd: cargo build
+      - cmd: cargo +stable build
 
   bench:
     desc: Runs benchmarks
@@ -58,13 +58,10 @@ tasks:
   fmt:
     desc: Runs the code formatter
     cmds:
-      - cmd: cargo fmt
+      - cmd: cargo +nightly fmt
 
   targets:
     desc: Builds release version for multiple targets
     cmds:
       - cmd: cargo +stable build --release --target=x86_64-unknown-linux-gnu
-      - cmd: cargo build --release --target=x86_64-unknown-linux-musl
-      - cmd: cargo build --release --target=mips-unknown-linux-gnu
-      - cmd: cargo build --release --target=wasm32-wasi
-      - cmd: cargo build --release --target=wasm32-unknown-emscripten
+      - cmd: cargo +stable build --release --target=x86_64-unknown-linux-musl

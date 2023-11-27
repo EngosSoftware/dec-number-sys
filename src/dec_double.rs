@@ -16,12 +16,20 @@ pub const DEC_DOUBLE_STRING: usize = 25;
 pub const DEC_DOUBLE_STRING_BUFFER: [c_char; DEC_DOUBLE_STRING] = [0; DEC_DOUBLE_STRING];
 
 /// Convenient constant for [DecDouble] equal to positive zero.
-#[rustfmt::skip]
+
 pub const DEC_DOUBLE_ZERO: DecDouble = {
   #[cfg(target_endian = "little")]
-  { DecDouble { bytes: [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x22] }}
+  {
+    DecDouble {
+      bytes: [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x22],
+    }
+  }
   #[cfg(target_endian = "big")]
-  { DecDouble { bytes: [0x22, 0x38, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00] }}
+  {
+    DecDouble {
+      bytes: [0x22, 0x38, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+    }
+  }
 };
 
 /// 64-bit decimal number.

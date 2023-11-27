@@ -37,32 +37,79 @@ fn test_dec_number_compare() {
 }
 
 #[test]
-#[rustfmt::skip]
 fn test_dec_quad_constants() {
   // zero
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(0)));
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_ZERO));
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(0))
+  );
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_ZERO)
+  );
   // one
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(1)));
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_ONE));
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(1))
+  );
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_ONE)
+  );
   // two
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(2)));
-  assert_eq!("DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_TWO));
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(2))
+  );
+  assert_eq!(
+    "DecNumber { digits: 1, exponent: 0, bits: 0, lsu: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_TWO)
+  );
   // ten
-  assert_eq!("DecNumber { digits: 2, exponent: 0, bits: 0, lsu: [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(10)));
-  assert_eq!("DecNumber { digits: 2, exponent: 0, bits: 0, lsu: [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_TEN));
+  assert_eq!(
+    "DecNumber { digits: 2, exponent: 0, bits: 0, lsu: [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(10))
+  );
+  assert_eq!(
+    "DecNumber { digits: 2, exponent: 0, bits: 0, lsu: [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_TEN)
+  );
   // hundred
-  assert_eq!("DecNumber { digits: 3, exponent: 0, bits: 0, lsu: [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(100)));
-  assert_eq!("DecNumber { digits: 3, exponent: 0, bits: 0, lsu: [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_HUNDRED));
+  assert_eq!(
+    "DecNumber { digits: 3, exponent: 0, bits: 0, lsu: [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(100))
+  );
+  assert_eq!(
+    "DecNumber { digits: 3, exponent: 0, bits: 0, lsu: [100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_HUNDRED)
+  );
   // thousand
-  assert_eq!("DecNumber { digits: 4, exponent: 0, bits: 0, lsu: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(1000)));
-  assert_eq!("DecNumber { digits: 4, exponent: 0, bits: 0, lsu: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_THOUSAND));
+  assert_eq!(
+    "DecNumber { digits: 4, exponent: 0, bits: 0, lsu: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(1000))
+  );
+  assert_eq!(
+    "DecNumber { digits: 4, exponent: 0, bits: 0, lsu: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_THOUSAND)
+  );
   // million
-  assert_eq!("DecNumber { digits: 7, exponent: 0, bits: 0, lsu: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(1000000)));
-  assert_eq!("DecNumber { digits: 7, exponent: 0, bits: 0, lsu: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_MILLION));
+  assert_eq!(
+    "DecNumber { digits: 7, exponent: 0, bits: 0, lsu: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(1000000))
+  );
+  assert_eq!(
+    "DecNumber { digits: 7, exponent: 0, bits: 0, lsu: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_MILLION)
+  );
   // billion
-  assert_eq!("DecNumber { digits: 10, exponent: 0, bits: 0, lsu: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", n!(1000000000)));
-  assert_eq!("DecNumber { digits: 10, exponent: 0, bits: 0, lsu: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] }", format!("{:?}", DEC_NUMBER_BILLION));
+  assert_eq!(
+    "DecNumber { digits: 10, exponent: 0, bits: 0, lsu: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", n!(1000000000))
+  );
+  assert_eq!(
+    "DecNumber { digits: 10, exponent: 0, bits: 0, lsu: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0] }",
+    format!("{:?}", DEC_NUMBER_BILLION)
+  );
 }
 
 #[test]

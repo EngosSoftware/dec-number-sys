@@ -3,7 +3,6 @@
 use crate::{DecContext, DecDouble, DecSingle};
 use libc::c_char;
 
-#[rustfmt::skip]
 extern "C" {
   /// Unsafe binding to *decSingleFromString* function.
   pub fn decSingleFromString(ds: *mut DecSingle, s: *const c_char, dc: *mut DecContext) -> *mut DecSingle;

@@ -16,12 +16,20 @@ pub const DEC_SINGLE_STRING: usize = 16;
 pub const DEC_SINGLE_STRING_BUFFER: [c_char; DEC_SINGLE_STRING] = [0; DEC_SINGLE_STRING];
 
 /// Convenient constant for [DecSingle] equal to positive zero.
-#[rustfmt::skip]
+
 pub const DEC_SINGLE_ZERO: DecSingle = {
   #[cfg(target_endian = "little")]
-  { DecSingle { bytes: [0x00, 0x00, 0x50, 0x22] }}
+  {
+    DecSingle {
+      bytes: [0x00, 0x00, 0x50, 0x22],
+    }
+  }
   #[cfg(target_endian = "big")]
-  { DecSingle { bytes: [0x22, 0x50, 0x00, 0x00] }}
+  {
+    DecSingle {
+      bytes: [0x22, 0x50, 0x00, 0x00],
+    }
+  }
 };
 
 /// 32-bit decimal number.

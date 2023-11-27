@@ -115,32 +115,79 @@ fn test_dec_quad_copy_sign() {
 }
 
 #[test]
-#[rustfmt::skip]
 fn test_dec_quad_constants() {
   // zero
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00]", format!("{:?}", n!(0)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00]", format!("{:?}", DEC_QUAD_ZERO));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00]",
+    format!("{:?}", n!(0))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00]",
+    format!("{:?}", DEC_QUAD_ZERO)
+  );
   // one
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 01]", format!("{:?}", n!(1)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 01]", format!("{:?}", DEC_QUAD_ONE));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 01]",
+    format!("{:?}", n!(1))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 01]",
+    format!("{:?}", DEC_QUAD_ONE)
+  );
   // two
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 02]", format!("{:?}", n!(2)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 02]", format!("{:?}", DEC_QUAD_TWO));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 02]",
+    format!("{:?}", n!(2))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 02]",
+    format!("{:?}", DEC_QUAD_TWO)
+  );
   // ten
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 10]", format!("{:?}", n!(10)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 10]", format!("{:?}", DEC_QUAD_TEN));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 10]",
+    format!("{:?}", n!(10))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 10]",
+    format!("{:?}", DEC_QUAD_TEN)
+  );
   // hundred
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 80]", format!("{:?}", n!(100)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 80]", format!("{:?}", DEC_QUAD_HUNDRED));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 80]",
+    format!("{:?}", n!(100))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 00 80]",
+    format!("{:?}", DEC_QUAD_HUNDRED)
+  );
   // thousand
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 04 00]", format!("{:?}", n!(1000)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 00 04 00]", format!("{:?}", DEC_QUAD_THOUSAND));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 04 00]",
+    format!("{:?}", n!(1000))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 00 04 00]",
+    format!("{:?}", DEC_QUAD_THOUSAND)
+  );
   // million
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 10 00 00]", format!("{:?}", n!(1000000)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 00 10 00 00]", format!("{:?}", DEC_QUAD_MILLION));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 10 00 00]",
+    format!("{:?}", n!(1000000))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 00 10 00 00]",
+    format!("{:?}", DEC_QUAD_MILLION)
+  );
   // billion
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 40 00 00 00]", format!("{:?}", n!(1000000000)));
-  assert_eq!("[22 08 00 00 00 00 00 00 00 00 00 00 40 00 00 00]", format!("{:?}", DEC_QUAD_BILLION));
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 40 00 00 00]",
+    format!("{:?}", n!(1000000000))
+  );
+  assert_eq!(
+    "[22 08 00 00 00 00 00 00 00 00 00 00 40 00 00 00]",
+    format!("{:?}", DEC_QUAD_BILLION)
+  );
 }
 
 #[test]
@@ -179,14 +226,31 @@ fn test_dec_quad_divide_integer() {
 }
 
 #[test]
-#[rustfmt::skip]
 fn test_dec_quad_from_bcd() {
-  assert_eq!("2366920938463463374607431768211455", s!(dec_quad_from_bcd(&bcd_quad(u128::MAX), 0, false)));
-  assert_eq!("18446744073709551615", s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), 0, false)));
-  assert_eq!("-18446744073709551615", s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), 0, true)));
-  assert_eq!("9223372036854775807", s!(dec_quad_from_bcd(&bcd_quad(i64::MAX.unsigned_abs().into()), 0, false)));
-  assert_eq!("-9223372036854775808", s!(dec_quad_from_bcd(&bcd_quad(i64::MIN.unsigned_abs().into()), 0, true)));
-  assert_eq!("1844674407.3709551615", s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), -10, false)));
+  assert_eq!(
+    "2366920938463463374607431768211455",
+    s!(dec_quad_from_bcd(&bcd_quad(u128::MAX), 0, false))
+  );
+  assert_eq!(
+    "18446744073709551615",
+    s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), 0, false))
+  );
+  assert_eq!(
+    "-18446744073709551615",
+    s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), 0, true))
+  );
+  assert_eq!(
+    "9223372036854775807",
+    s!(dec_quad_from_bcd(&bcd_quad(i64::MAX.unsigned_abs().into()), 0, false))
+  );
+  assert_eq!(
+    "-9223372036854775808",
+    s!(dec_quad_from_bcd(&bcd_quad(i64::MIN.unsigned_abs().into()), 0, true))
+  );
+  assert_eq!(
+    "1844674407.3709551615",
+    s!(dec_quad_from_bcd(&bcd_quad(u64::MAX.into()), -10, false))
+  );
 }
 
 #[test]
@@ -201,7 +265,7 @@ fn test_dec_quad_from_i32() {
 // }
 
 // #[test]
-// #[rustfmt::skip]
+//
 // fn test_dec_quad_from_packed() {
 //   assert_eq!("2366920938463463374607431768211455", s!(dec_quad_from_packed(&bcd_quad(u128::MAX), 0, false)));
 //   assert_eq!("18446744073709551615", s!(dec_quad_from_packed(&bcd_quad(u64::MAX.into()), 0, false)));
@@ -223,8 +287,8 @@ fn test_dec_quad_from_u32() {
 
 #[test]
 fn test_dec_quad_get_coefficient() {
-  assert_eq!(0, dec_quad_get_coefficient(&mut n!(1), &mut bcd_quad(u128::MAX)));
-  assert_eq!(-2147483648, dec_quad_get_coefficient(&mut n!(-1), &mut bcd_quad(u128::MAX)));
+  assert_eq!(0, dec_quad_get_coefficient(&n!(1), &mut bcd_quad(u128::MAX)));
+  assert_eq!(-2147483648, dec_quad_get_coefficient(&n!(-1), &mut bcd_quad(u128::MAX)));
 }
 
 #[test]

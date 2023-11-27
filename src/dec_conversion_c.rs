@@ -2,7 +2,6 @@
 
 use crate::{DecContext, DecDouble, DecNumber, DecQuad, DecSingle};
 
-#[rustfmt::skip]
 extern "C" {
   /// Unsafe binding to *decimal32ToNumber* function.
   pub fn decimal32ToNumber(ds: *const DecSingle, dn: *mut DecNumber) -> *mut DecNumber;

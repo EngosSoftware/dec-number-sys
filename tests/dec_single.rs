@@ -49,7 +49,7 @@ fn test_dec_single_divide() {
 }
 
 #[test]
-#[rustfmt::skip]
+
 fn test_dec_single_from_bcd() {
   assert_eq!("2366920938463463374607431768211455", s!(dec_single_from_bcd(&bcd_quad(u128::MAX), 0, false)));
   assert_eq!("18446744073709551615", s!(dec_single_from_bcd(&bcd_quad(u64::MAX.into()), 0, false)));
@@ -159,7 +159,6 @@ fn test_dec_single_to_integral_value() {
 */
 
 #[test]
-#[rustfmt::skip]
 fn test_dec_single_constants() {
   // zero
   assert_eq!("[22 50 00 00]", format!("{:?}", n!(0)));
